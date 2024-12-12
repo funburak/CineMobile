@@ -4,6 +4,13 @@ CineMobile is a Flutter-based mobile application designed to provide information
 
 ---
 
+## Prerequisites
+
+1. Ensure you have the [Flutter SDK](https://flutter.dev/docs/get-started/install) installed on your system.
+2. Verify your Flutter installation:
+   ```bash
+   flutter --version
+
 ## Configure Your API Key
 
 This project uses an external API (e.g., TMDB API) for fetching movie details.
@@ -25,4 +32,4 @@ To build the project, follow these steps
 ## Download the release APK
 
 To run the project on your own device download the apk
-1. Download the apk at build/app/outputs/flutter-apk/app-release.apk
+1. Download the cinemobile.apk
