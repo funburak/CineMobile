@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      home: const HomePage(),  // Directly show the HomePage
+      home: const HomePage(),
     );
   }
 }
@@ -31,44 +31,39 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;  // Track the selected page index
+  int _selectedIndex = 0;
 
-  // Handle page selection
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;  // Update the selected index
+      _selectedIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // List of pages (corresponding to BottomNavigationBar)
     final List<Widget> _pages = [
-      const MovieDetailsPage(),  // Page 0
-      const ListsPage(),         // Page 1
-      const ChatbotPage(),       // Page 2
+      const MovieDetailsPage(), // Page 0
+      const ListsPage(), // Page 1
+      const ChatbotPage(), // Page 2
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Welcome to Cinemobile'),
-      ),
-      body: _pages[_selectedIndex],  // Render the selected page based on _selectedIndex
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,  // Highlight the selected icon
-        onTap: _onItemTapped,  // Handle taps on the icons
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Movies',  // Label for MovieDetailsPage
+            label: 'Movies',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            label: 'Lists',  // Label for ListsPage
+            label: 'Lists',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
-            label: 'Chatbot',  // Label for ChatbotPage
+            label: 'Chatbot',
           ),
         ],
       ),

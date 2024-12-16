@@ -15,7 +15,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
   bool isLoading = false;
 
   // TMDB API key (replace with your API key)
-  final String tmdbApiKey = 'YOUR_API_KEY';
+  final String tmdbApiKey = 'c6d13ac5863347aa42a5a90abbbd5fec';
 
   void _sendMessage() async {
     if (_controller.text.isEmpty) return;
