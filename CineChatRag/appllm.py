@@ -32,7 +32,7 @@ def initialize_retriever():
     global retriever
 
     # Load and preprocess the CSV file
-    df = pd.read_csv("CineChatCSV_cleaned_new.csv")
+    df = pd.read_csv("CineChatRag/CineChatCSV_cleaned_new.csv")
 
     def combine_fields(row):
         summary = str(row.get('summary', ''))
